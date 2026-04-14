@@ -3,171 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghana Nair | Marketing Portfolio</title>
-    <!-- Tailwind CSS for modern styling -->
+    <title>Meghana Nair | Hospitality Marketing Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- AOS for Scroll Animations -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
+        :root {
+            --bg: #fdfcf8;
+            --accent: #1a1a1a;
+            --gold: #b59b6d;
+        }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--accent);
             scroll-behavior: smooth;
         }
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+        
+        /* Interactive Reveal Effect */
+        .reveal-box {
+            position: relative;
+            overflow: hidden;
         }
-        .glass:hover {
-            background: rgba(255, 255, 255, 0.07);
-            transform: translateY(-5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .reveal-box::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--gold);
+            transform: translateX(-101%);
+            transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #60a5fa, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .reveal-box:hover::after { transform: translateX(101%); }
+
+        .project-card {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            transition: all 0.5s ease;
         }
-        .nav-link:hover {
-            color: #60a5fa;
+        .project-card:hover {
+            padding-left: 20px;
+            border-bottom: 1px solid var(--gold);
+        }
+        
+        .sticky-nav {
+            backdrop-filter: blur(8px);
+            background: rgba(253, 252, 248, 0.8);
+        }
+        
+        .btn-gold {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            transition: all 0.3s;
+        }
+        .btn-gold:hover {
+            background: var(--gold);
+            color: white;
         }
     </style>
 </head>
-<body class="overflow-x-hidden">
+<body class="antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass py-4 px-6 md:px-12 flex justify-between items-center">
-        <div class="text-xl font-extrabold tracking-tighter uppercase">Meghana <span class="text-blue-400">Nair</span></div>
-        <div class="hidden md:flex space-x-8 font-medium">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#contact" class="nav-link">Contact</a>
+    <nav class="fixed w-full z-50 sticky-nav py-6 px-8 md:px-16 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-widest uppercase serif">Meghana Nair</div>
+        <div class="hidden md:flex space-x-12 text-xs uppercase tracking-widest font-semibold">
+            <a href="#projects" class="hover:text-gold transition">Projects</a>
+            <a href="#services" class="hover:text-gold transition">Expertise</a>
+            <a href="#contact" class="hover:text-gold transition">Contact</a>
         </div>
-        <a href="#contact" class="bg-blue-600 hover:bg-blue-500 px-5 py-2 rounded-full text-sm font-semibold transition">Let's Talk</a>
+        <div class="md:hidden">MENU</div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
-        <div class="text-center" data-aos="zoom-out" data-aos-duration="1500">
-            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tight">
-                Crafting <span class="gradient-text">Experiences</span> <br> Through Marketing
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
-                Marketing Executive specializing in Luxury Hospitality and Vacation Homes. 
-                Transforming properties into world-class retreat destinations.
+    <section class="min-h-screen flex flex-col justify-center px-8 md:px-24 pt-20">
+        <p class="text-gold uppercase tracking-[0.3em] text-xs mb-4" data-aos="fade-up">Luxury Hospitality Marketing</p>
+        <h1 class="text-6xl md:text-9xl leading-none mb-8" data-aos="fade-up" data-aos-delay="200">
+            Elevating <br><i class="serif">Boutique</i> Retreats.
+        </h1>
+        <div class="max-w-xl" data-aos="fade-up" data-aos-delay="400">
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                Marketing Executive specializing in end-to-end solutions for luxury vacation homes and experiential resorts. Transforming properties into world-class destinations through data-driven storytelling.
             </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#projects" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition">View My Work</a>
-                <a href="#about" class="glass px-8 py-4 rounded-full font-bold hover:scale-105 transition">About Me</a>
+            <a href="#projects" class="btn-gold px-10 py-4 inline-block uppercase text-xs tracking-widest font-bold">Discover Work</a>
+        </div>
+    </section>
+
+    <!-- Projects List Style (Interactive) -->
+    <section id="projects" class="py-32 px-8 md:px-24 bg-[#1a1a1a] text-white">
+        <h2 class="text-gold uppercase tracking-[0.3em] text-xs mb-16">Selected Portfolio</h2>
+        
+        <!-- Project 1 -->
+        <div class="project-card py-12 group flex flex-col md:flex-row justify-between items-start md:items-center" data-aos="fade-up">
+            <div class="mb-4 md:mb-0">
+                <span class="text-sm text-gray-500 mb-2 block">01 / Case Study</span>
+                <h3 class="text-4xl md:text-6xl serif italic group-hover:text-gold transition-colors">End-to-End Vacation Marketing</h3>
+            </div>
+            <div class="max-w-sm text-gray-400 text-sm leading-relaxed">
+                Strategic brand positioning and lead generation for luxury vacation homes, delivering 50% more engagement and 30% higher conversions.
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card py-12 group flex flex-col md:flex-row justify-between items-start md:items-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4 md:mb-0">
+                <span class="text-sm text-gray-500 mb-2 block">02 / Scale</span>
+                <h3 class="text-4xl md:text-6xl serif italic group-hover:text-gold transition-colors">Jade Hospitainment</h3>
+            </div>
+            <div class="max-w-sm text-gray-400 text-sm leading-relaxed">
+                Managing marketing for 50+ unique boutique villas across Bangalore & Goa. A pioneer in holiday villa retreats with over two decades of hospitality expertise.
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card py-12 group flex flex-col md:flex-row justify-between items-start md:items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="mb-4 md:mb-0">
+                <span class="text-sm text-gray-500 mb-2 block">03 / Innovation</span>
+                <h3 class="text-4xl md:text-6xl serif italic group-hover:text-gold transition-colors">The Dome Retreats</h3>
+            </div>
+            <div class="max-w-sm text-gray-400 text-sm leading-relaxed">
+                Marketing for the World’s First Dome Resort. Focusing on Sarovara Dome Stay, biophilic design, and sustainable luxury "Panchabhootha" experiences.
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6 md:px-12">
-        <div class="mb-16">
-            <h2 class="text-4xl font-bold mb-4" data-aos="fade-right">Featured Projects</h2>
-            <div class="h-1 w-20 bg-blue-500 rounded"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Project 1 -->
-            <div class="glass p-8 rounded-3xl" data-aos="fade-up">
-                <div class="text-blue-400 font-bold mb-4 text-sm uppercase tracking-widest">Case Study</div>
-                <h3 class="text-2xl font-bold mb-4">End-to-End Marketing for Vacation Homes</h3>
-                <p class="text-slate-400 mb-6 leading-relaxed">
-                    A comprehensive marketing strategy covering lead generation, guest relations, and brand positioning for high-end vacation properties.
-                </p>
-                <div class="flex gap-2">
-                    <span class="text-xs glass px-3 py-1 rounded-full">Strategy</span>
-                    <span class="text-xs glass px-3 py-1 rounded-full">Lead Gen</span>
+    <!-- Expertise Section -->
+    <section id="services" class="py-32 px-8 md:px-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div data-aos="fade-right">
+                <h2 class="text-5xl serif mb-8">Integrated Content & Marketing Solutions</h2>
+                <p class="text-gray-600 mb-8">I deliver data-driven marketing and captivating content to help brands stand out in the GCC and Indian hospitality markets.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 border-b border-gray-200 py-4">
+                        <span class="text-gold font-bold">01</span>
+                        <span class="uppercase tracking-widest text-sm">Social Media Management</span>
+                    </div>
+                    <div class="flex items-center gap-4 border-b border-gray-200 py-4">
+                        <span class="text-gold font-bold">02</span>
+                        <span class="uppercase tracking-widest text-sm">Video Production & Editing</span>
+                    </div>
+                    <div class="flex items-center gap-4 border-b border-gray-200 py-4">
+                        <span class="text-gold font-bold">03</span>
+                        <span class="uppercase tracking-widest text-sm">Website Design & UX Optimization</span>
+                    </div>
                 </div>
             </div>
-
-            <!-- Project 2 -->
-            <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-widest">Brand Growth</div>
-                <h3 class="text-2xl font-bold mb-4">Jade Hospitainment</h3>
-                <p class="text-slate-400 mb-6 leading-relaxed">
-                    Pioneering luxury pool villas and private farmhouses. Managing marketing efforts for 50+ unique boutique properties across Bangalore and Goa.
-                </p>
-                <div class="flex gap-2">
-                    <span class="text-xs glass px-3 py-1 rounded-full">Hospitality</span>
-                    <span class="text-xs glass px-3 py-1 rounded-full">Scale</span>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                <div class="text-green-400 font-bold mb-4 text-sm uppercase tracking-widest">Eco-Luxury</div>
-                <h3 class="text-2xl font-bold mb-4">The Dome Retreats</h3>
-                <p class="text-slate-400 mb-6 leading-relaxed">
-                    World’s first dome resort. Marketing focus on sustainability, neuro-architecture, and biophilic design to create an enchanting glamping experience.
-                </p>
-                <div class="flex gap-2">
-                    <span class="text-xs glass px-3 py-1 rounded-full">Sustainability</span>
-                    <span class="text-xs glass px-3 py-1 rounded-full">Brand Identity</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Content / About Section -->
-    <section id="about" class="py-24 bg-slate-900/50 px-6 md:px-12">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="w-full md:w-1/2" data-aos="fade-right">
-                <h2 class="text-4xl font-bold mb-6">Elevating Brands in the <span class="text-blue-400">Hospitality Space</span></h2>
-                <p class="text-lg text-slate-300 mb-6 leading-relaxed">
-                    I focus on end-to-end marketing solutions that don't just drive traffic, but create lasting memories. My work with Jade Hospitainment and The Dome Retreats has allowed me to blend data-driven strategies with the magic of experiential travel.
-                </p>
-                <ul class="space-y-4">
-                    <li class="flex items-center gap-3"><span class="h-2 w-2 bg-blue-500 rounded-full"></span> Content Strategy & Creation</li>
-                    <li class="flex items-center gap-3"><span class="h-2 w-2 bg-blue-500 rounded-full"></span> Social Media Brand Management</li>
-                    <li class="flex items-center gap-3"><span class="h-2 w-2 bg-blue-500 rounded-full"></span> Lead Generation & Conversion Funnels</li>
-                </ul>
-            </div>
-            <div class="w-full md:w-1/2 glass h-80 rounded-3xl flex items-center justify-center" data-aos="fade-left">
-                <span class="text-slate-500 italic">[ Image of Marketing Excellence ]</span>
+            <div class="bg-gray-100 min-h-[400px] flex items-center justify-center italic text-gray-400 serif text-2xl" data-aos="zoom-in">
+                [ Experiential Visual Placeholder ]
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 text-center">
-        <div class="max-w-2xl mx-auto glass p-12 rounded-[3rem]" data-aos="zoom-in">
-            <h2 class="text-4xl font-bold mb-4">Ready to collaborate?</h2>
-            <p class="text-slate-400 mb-8">Let’s discuss how we can grow your hospitality brand together.</p>
-            <a href="mailto:meghananair07@example.com" class="text-2xl md:text-3xl font-semibold hover:text-blue-400 transition break-all">
-                meghananair07@wixsite.com
-            </a>
-            <div class="mt-8 flex justify-center space-x-6 text-slate-400">
-                <a href="#" class="hover:text-white transition">LinkedIn</a>
-                <a href="#" class="hover:text-white transition">Instagram</a>
-                <a href="#" class="hover:text-white transition">Twitter</a>
-            </div>
+    <!-- Footer / Contact -->
+    <section id="contact" class="py-32 px-8 md:px-24 bg-white text-center">
+        <h2 class="text-gold uppercase tracking-[0.3em] text-xs mb-8" data-aos="fade-up">Get in Touch</h2>
+        <a href="mailto:meghananair07@gmail.com" class="text-4xl md:text-7xl serif underline hover:text-gold transition-colors" data-aos="fade-up">
+            meghananair07@gmail.com
+        </a>
+        <div class="mt-20 flex justify-center space-x-12 uppercase text-[10px] tracking-[0.4em] font-bold text-gray-400">
+            <a href="https://www.linkedin.com/in/meghana-sadanandan-nair-5b20641b6" class="hover:text-black">LinkedIn</a>
+            <a href="#" class="hover:text-black">Instagram</a>
+            <a href="#" class="hover:text-black">Wix Original</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-10 text-center text-sm text-slate-600 border-t border-slate-800">
-        © 2024 Meghana Nair. Built for Excellence.
+    <footer class="py-12 text-center text-[10px] tracking-widest text-gray-400 uppercase">
+        © 2024 Meghana Nair Portfolio — Built for Hospitality Excellence
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        AOS.init({ duration: 1200, once: true });
     </script>
 </body>
 </html>
