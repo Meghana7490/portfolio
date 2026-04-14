@@ -3,160 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghana Nair | Marketing Executive</title>
+    <title>Meghana Sadanandan Nair | Growth Marketer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root { --accent: #c4a661; }
-        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; }
-        .title-font { font-family: 'Syncopate', sans-serif; text-transform: uppercase; letter-spacing: -0.05em; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .sticky-side { position: sticky; top: 120px; }
-        .accent-border { border-left: 2px solid var(--accent); padding-left: 20px; }
-        .text-justify { text-align: justify; }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: var(--accent); }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #ffffff; 
+            color: #1a1a1a;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #fef9c3 0%, #d1fae5 50%, #f5f3ff 100%);
+        }
+        .experience-bg {
+            background-color: #f6e8f1; /* The soft pink from your screenshot */
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .nav-link:hover { color: #8b5cf6; }
+        .btn-dark {
+            background: #1e293b;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-dark:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 py-6 px-10 flex justify-between items-center glass">
-        <div class="title-font font-bold text-xl tracking-tighter">MEGHANA <span class="text-gray-500">NAIR</span></div>
-        <div class="hidden md:flex space-x-8 text-[10px] title-font font-bold">
-            <a href="#about" class="hover:text-accent transition">About</a>
-            <a href="#services" class="hover:text-accent transition">Services</a>
-            <a href="#projects" class="hover:text-accent transition">Projects</a>
-            <a href="#contact" class="text-accent border border-accent px-4 py-1">Contact</a>
+    <nav class="fixed top-0 w-full z-50 px-6 py-6 md:px-16 flex justify-between items-center bg-white/50 backdrop-blur-md">
+        <div class="hidden md:flex space-x-10 text-[11px] uppercase tracking-[0.2em] font-bold mx-auto">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Case Study</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
 
-    <!-- HERO / ABOUT -->
-    <section id="about" class="min-h-screen flex items-center px-10 md:px-20 pt-20">
-        <div class="max-w-6xl">
-            <h2 class="text-accent title-font text-xs mb-4" data-aos="fade-right">Marketing Executive</h2>
-            <h1 class="text-5xl md:text-8xl title-font font-bold mb-10 leading-none" data-aos="fade-up">
-                IMPACTFUL <br>MARKETING.
-            </h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <p class="text-xl md:text-2xl font-light leading-relaxed text-gray-300" data-aos="fade-up" data-aos-delay="200">
-                    I am Meghana Nair, a dedicated Marketing Executive with a focus on the hospitality industry, specializing in both the GCC and Indian markets.
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <h2 class="text-lg font-bold tracking-tighter mb-2">MEGHANA SADANANDAN NAIR</h2>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Revenue-Driven Growth Marketer</h1>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-lg">
+                    I help brands generate qualified leads, improve conversions, and drive revenue through performance marketing and sales-focused funnels. Experience across real estate, SaaS, and hospitality. Based in Dubai.
                 </p>
-                <div class="text-sm text-gray-400 leading-relaxed space-y-4" data-aos="fade-up" data-aos-delay="300">
-                    <p>I deliver data-driven marketing and captivating content to help brands stand out in the competitive hospitality market. My approach is focused on end-to-end marketing solutions that include social media management, lead generation, and brand growth.</p>
-                    <p>Currently, I serve as a Marketing Executive at Jade Hospitainment, where I focus on elevating brand visibility and driving results through integrated digital strategies.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-sm font-bold border-b-2 border-black pb-1">More About Me</a>
+                    <button class="btn-dark px-8 py-3 rounded-md text-sm font-bold">DOWNLOAD CV</button>
+                </div>
+            </div>
+            <div class="flex justify-center" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="relative w-72 h-72 md:w-96 md:h-96">
+                    <!-- Photo placeholder - upload your photo as profile.png to GitHub -->
+                    <img src="profile.png" onerror="this.src='https://ui-avatars.com/api/?name=Meghana+Nair&background=random&size=512'" class="rounded-full w-full h-full object-cover shadow-2xl border-8 border-white">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="py-32 px-10 md:px-20 bg-zinc-950">
-        <h2 class="title-font text-4xl mb-20 border-b border-zinc-800 pb-10">Services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-zinc-800">
-            <div class="bg-black p-10 hover:bg-zinc-900 transition group" data-aos="fade-up">
-                <span class="text-accent text-xs mb-4 block">01</span>
-                <h3 class="title-font text-lg mb-4">Video Production & Editing</h3>
-            </div>
-            <div class="bg-black p-10 hover:bg-zinc-900 transition group" data-aos="fade-up" data-aos-delay="100">
-                <span class="text-accent text-xs mb-4 block">02</span>
-                <h3 class="title-font text-lg mb-4">Social Media Management</h3>
-            </div>
-            <div class="bg-black p-10 hover:bg-zinc-900 transition group" data-aos="fade-up" data-aos-delay="200">
-                <span class="text-accent text-xs mb-4 block">03</span>
-                <h3 class="title-font text-lg mb-4">Content Strategy & Creation</h3>
-            </div>
-            <div class="bg-black p-10 hover:bg-zinc-900 transition group" data-aos="fade-up">
-                <span class="text-accent text-xs mb-4 block">04</span>
-                <h3 class="title-font text-lg mb-4">Website Design & UX</h3>
-            </div>
-            <div class="bg-black p-10 hover:bg-zinc-900 transition group" data-aos="fade-up" data-aos-delay="100">
-                <span class="text-accent text-xs mb-4 block">05</span>
-                <h3 class="title-font text-lg mb-4">Lead Generation & Conversion</h3>
-            </div>
-            <div class="bg-black p-10 hover:bg-zinc-900 transition group" data-aos="fade-up" data-aos-delay="200">
-                <span class="text-accent text-xs mb-4 block">06</span>
-                <h3 class="title-font text-lg mb-4">Brand Management</h3>
-            </div>
+    <!-- Experience Section Header -->
+    <section class="py-20 text-center">
+        <h2 class="text-4xl md:text-5xl font-light tracking-widest uppercase mb-4" data-aos="fade-up">My Experience</h2>
+        <div class="flex justify-center" data-aos="fade-up">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="py-32 px-10 md:px-20">
-        
-        <!-- PROJECT 1 -->
-        <div class="mb-40 grid grid-cols-1 md:grid-cols-12 gap-10">
-            <div class="md:col-span-4 sticky-side">
-                <h2 class="title-font text-3xl accent-border mb-6">End-to-End Marketing for Vacation Homes</h2>
-                <div class="flex gap-4">
-                    <div class="glass p-4 rounded text-center flex-1">
-                        <span class="block text-2xl title-font text-accent">30%</span>
-                        <span class="text-[8px] uppercase tracking-widest text-gray-500">Conv. Rate</span>
+    <!-- Experience Cards -->
+    <section id="experience" class="experience-bg py-24 px-6 md:px-16">
+        <div class="max-w-6xl mx-auto space-y-24">
+            
+            <!-- Growth Marketing Consultant -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                <div class="rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800" class="w-full h-[500px] object-cover" alt="Growth Marketing">
+                </div>
+                <div class="glass-card p-10 md:p-16">
+                    <span class="bg-black text-white px-4 py-1 rounded-full text-[10px] font-bold mb-6 inline-block">Jun 2022 – Present</span>
+                    <h3 class="text-3xl font-extrabold mb-6">Growth Marketing Consultant</h3>
+                    <ul class="space-y-4 text-sm leading-relaxed text-gray-700">
+                        <li>• Drove qualified lead generation and revenue growth for vacation rentals, real estate operators, and hospitality brands</li>
+                        <li>• Built and optimised high-conversion sales funnels (Meta Ads + landing flows) to increase booking enquiries and investor leads</li>
+                        <li>• Generated a consistent inbound pipeline by aligning campaign strategy with buyer intent and seasonality trends</li>
+                        <li>• Worked directly with founders to translate business targets into revenue-driven marketing plans</li>
+                        <li>• Improved lead-to-conversion rates through audience targeting, messaging, and funnel optimisation</li>
+                        <li>• Positioned listings and brands to attract high-intent buyers, not just engagement</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- WebEngage Experience -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                <div class="md:order-2 rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800" class="w-full h-[500px] object-cover" alt="WebEngage">
+                </div>
+                <div class="glass-card p-10 md:p-16 md:order-1">
+                    <span class="bg-black text-white px-4 py-1 rounded-full text-[10px] font-bold mb-6 inline-block">Jun 2020 – Sep 2022</span>
+                    <h3 class="text-2xl font-extrabold mb-6">Experiential Marketing Manager - B2B SaaS (Revenue & Pipeline Focus) | WebEngage</h3>
+                    <ul class="space-y-4 text-sm leading-relaxed text-gray-700">
+                        <li>• Contributed directly to sales pipeline growth by driving demand through events, partnerships, and outbound audience acquisition</li>
+                        <li>• Generated qualified enterprise leads via roundtables, CXO events, and targeted ecosystem collaborations</li>
+                        <li>• Worked closely with sales teams to convert marketing leads into opportunities and revenue</li>
+                        <li>• Owned end-to-end execution of high-value events (500+ attendees) focused on lead generation and deal acceleration</li>
+                        <li>• Built strategic partnerships that expanded market reach and inbound deal flow</li>
+                        <li>• Tracked and optimised pipeline contribution, lead quality, and ROI of campaigns</li>
+                    </ul>
+                    <div class="mt-10">
+                        <a href="#" class="text-sm font-bold border-b-2 border-black pb-1">View More On LinkedIn</a>
                     </div>
-                    <div class="glass p-4 rounded text-center flex-1">
-                        <span class="block text-2xl title-font text-accent">50%</span>
-                        <span class="text-[8px] uppercase tracking-widest text-gray-500">Engagement</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-32 px-6">
+        <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+            <p class="text-2xl md:text-3xl italic font-light leading-relaxed mb-8">
+                “I have worked with Meghana for the past 3 years. During the course, she helped us position our brand in a proper manner - luxury villa rental segment, which was critical for us.”
+            </p>
+            <p class="font-bold uppercase tracking-widest text-sm">Aakansh Koundinya</p>
+            <p class="text-gray-500 text-xs mt-1">Director - Jade Hospitainment</p>
+            <div class="mt-6 flex justify-center">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="w-6 h-6 opacity-50 hover:opacity-100 transition"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="hero-gradient py-24 px-6">
+        <div class="max-w-4xl mx-auto bg-white p-12 md:p-20 shadow-sm text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div>
+                    <h4 class="text-gray-400 italic mb-4">Call</h4>
+                    <p class="text-sm">+971 557138898 /<br>+971 7030270047</p>
+                </div>
+                <div>
+                    <h4 class="text-gray-400 italic mb-4">Email</h4>
+                    <p class="text-sm">meghananair07@gmail.com</p>
+                </div>
+                <div>
+                    <h4 class="text-gray-400 italic mb-4">Follow</h4>
+                    <div class="flex justify-center gap-4">
+                        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="w-5 h-5"></a>
+                        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="w-5 h-5"></a>
                     </div>
                 </div>
             </div>
-            <div class="md:col-span-8 space-y-8 text-gray-300 leading-relaxed text-justify" data-aos="fade-left">
-                <p>My expertise lies in developing and executing comprehensive marketing strategies for luxury vacation homes, delivering measurable results that drive both high-intent leads and guest stays. By integrating lead generation, brand positioning, and social media management, I create a cohesive online presence that reflects the unique character of each property.</p>
-                <p>From visual storytelling to targeted ad campaigns, I ensure that every touchpoint in the guest’s journey is optimized for engagement and booking. Whether it’s a 30% increase in conversion rates or 50% more engagement on social media, my goal is always to maximize a home’s visibility and profitability in the competitive short-term rental market.</p>
-                <div class="h-96 bg-zinc-900 rounded-xl overflow-hidden grayscale hover:grayscale-0 transition duration-700">
-                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200" class="w-full h-full object-cover" alt="Luxury Vacation Home">
-                </div>
+            <div class="mt-16 text-center">
+                <p class="font-bold tracking-[0.3em] text-sm">DUBAI, UAE</p>
             </div>
         </div>
-
-        <!-- PROJECT 2 -->
-        <div class="mb-40 grid grid-cols-1 md:grid-cols-12 gap-10">
-            <div class="md:col-span-4 sticky-side">
-                <h2 class="title-font text-3xl accent-border mb-6">Jade Hospitainment</h2>
-                <p class="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold">50+ Boutique Properties</p>
-                <p class="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold mt-2">Bangalore & Goa</p>
-            </div>
-            <div class="md:col-span-8 space-y-8 text-gray-300 leading-relaxed text-justify" data-aos="fade-left">
-                <p>As a Marketing Executive at Jade Hospitainment, I contribute to the brand’s success across Bangalore and Goa, managing marketing efforts for a wide range of luxury properties, including holiday pool villas and private farmhouses.</p>
-                <p>With over 50 unique boutique properties in our portfolio, Jade Hospitainment has been a pioneer in the space of holiday villa retreats for over two decades. My role involves enhancing the digital presence of these properties and ensuring that our luxury offerings reach the right audience through targeted marketing and storytelling.</p>
-                <div class="h-96 bg-zinc-900 rounded-xl overflow-hidden grayscale hover:grayscale-0 transition duration-700">
-                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200" class="w-full h-full object-cover" alt="Jade Property">
-                </div>
-            </div>
+        <div class="mt-12 text-center text-[10px] text-gray-400 uppercase tracking-widest">
+            © 2025 by Meghana
         </div>
-
-        <!-- PROJECT 3 -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
-            <div class="md:col-span-4 sticky-side">
-                <h2 class="title-font text-3xl accent-border mb-6">The Dome Retreats</h2>
-                <p class="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold italic">World's First Dome Resort</p>
-            </div>
-            <div class="md:col-span-8 space-y-8 text-gray-300 leading-relaxed text-justify" data-aos="fade-left">
-                <p>Working with The Dome Retreats, the World’s first dome resort, has been an incredible opportunity to market a truly unique glamping experience. I manage the marketing for properties like the Sarovara Dome Stay, where the focus is on a harmonious blend of neuro-architecture, biophilic design, and sustainable luxury.</p>
-                <p>By showcasing how these stays create an enchanting environment that connects guests with the five elements of nature—Panchabhootha—I help drive interest and bookings for this one-of-a-kind resort experience.</p>
-                <div class="h-96 bg-zinc-900 rounded-xl overflow-hidden grayscale hover:grayscale-0 transition duration-700">
-                    <img src="https://images.unsplash.com/photo-1505333342082-825590a36e65?auto=format&fit=crop&w=1200" class="w-full h-full object-cover" alt="The Dome Retreat">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-40 px-10 text-center glass mx-10 md:mx-20 rounded-3xl mb-20">
-        <h2 class="title-font text-5xl md:text-8xl mb-12">Let's <span class="text-accent italic">Connect.</span></h2>
-        <a href="mailto:meghananair07@gmail.com" class="text-xl md:text-4xl font-light hover:text-accent transition border-b border-zinc-800 pb-2">
-            meghananair07@gmail.com
-        </a>
-        <div class="mt-20 flex justify-center space-x-12 title-font text-[10px] font-bold">
-            <a href="https://www.linkedin.com/in/meghana-sadanandan-nair-5b20641b6" class="hover:text-accent transition">LinkedIn</a>
-            <a href="#" class="hover:text-accent transition">Instagram</a>
-        </div>
-    </section>
-
-    <footer class="py-10 text-center text-[10px] title-font text-gray-600 uppercase tracking-widest">
-        © 2024 Meghana Nair Portfolio | All Rights Reserved
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
